@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Encontrá profesionales y servicios para tu hogar, comercio o vehículo. Conecta Servicios, Argentina.">
+<title>Conecta Servicios | Profesionales que resuelven</title>
+<style>
+:root{--navy:#123A52;--teal:#21B7A8;--bg:#F4F7FA;--ink:#1c2933;--muted:#61717d}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:white;line-height:1.55}
+header{background:var(--navy);color:white;padding:18px 20px}
+nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.brand{font-weight:850;font-size:1.25rem;letter-spacing:.2px}.brand span{color:var(--teal)}
+nav a{color:white;text-decoration:none;font-weight:650}
+.hero{background:linear-gradient(135deg,var(--navy),#1b6074);color:white;padding:68px 20px}
+.wrap{max-width:1100px;margin:auto}.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.08;margin:0 0 18px;max-width:780px}
+.hero p{font-size:1.12rem;max-width:650px;color:#e7f3f5}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-block;padding:13px 18px;border-radius:12px;text-decoration:none;font-weight:800}
+.btn.primary{background:var(--teal);color:#062f37}.btn.secondary{border:1px solid #b6d7df;color:white}
+section{padding:54px 20px}.soft{background:var(--bg)}h2{font-size:clamp(1.55rem,3vw,2.2rem);color:var(--navy);margin:0 0 12px}
+.intro{color:var(--muted);max-width:720px;margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.service{padding:20px;border:1px solid #e0e8ed;border-radius:16px;background:white;box-shadow:0 4px 14px #123a5209}
+.service .emoji{font-size:1.8rem}.service h3{margin:8px 0 5px;color:var(--navy)}.service p{margin:0;color:var(--muted);font-size:.95rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.step{padding:20px;border-radius:16px;background:white;border:1px solid #e2eaf0}
+.num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#d9f7f2;color:#086c64;font-weight:900}
+.notice{background:#fff7e6;border:1px solid #f2dfae;padding:16px;border-radius:12px;color:#674d11}
+footer{background:#0c2b3d;color:#d7e5eb;padding:28px 20px}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.small{font-size:.88rem;color:var(--muted)}footer .small{color:#bfd0d9}
+@media(max-width:600px){.hero{padding:48px 18px}section{padding:42px 18px}}
+</style>
+<script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+window.SUPABASE_CONFIG = {
+  url: "https://pyrfsjxjktovkshrwjgw.supabase.co",
+  anonKey: "sb_publishable_DL23CA8ZQonyjcsqJeBhEw_DxnMEVe2"
+};
+</script>
+  <script>
+  </script>
+<script>console.log("Configuración:", window.SUPABASE_CONFIG);</script>
+</head>
+<body>
+<header><nav><div class="brand">Conecta <span>Servicios</span></div><a href="#servicios">Ver servicios</a></nav></header>
+<main>
+<section class="hero"><div class="wrap">
+<h1>Personas que necesitan. Profesionales que resuelven.</h1>
+<p>Conectamos a clientes con profesionales y trabajadores independientes. Consultá por disponibilidad en tu localidad y pedí tu presupuesto directamente.</p>
+<div class="actions">
+<a class="btn primary" id="clientCta" href="#contacto">Solicitar un servicio</a>
+<a class="btn secondary" id="workerCta" href="#contacto">Ofrecer mis servicios</a>
+</div>
+</div></section>
+<section id="servicios"><div class="wrap">
+<h2>¿Qué servicio necesitás?</h2>
+<p class="intro">Elegí una categoría y consultá por profesionales disponibles. La cobertura depende de la localidad y de los trabajadores registrados.</p>
+<div class="grid">
+<article class="service"><div class="emoji">🚰</div><h3>Plomería</h3><p>Arreglos, pérdidas, instalaciones y mantenimiento.</p></article>
+<article class="service"><div class="emoji">💡</div><h3>Electricidad</h3><p>Instalaciones, reparaciones y revisión eléctrica.</p></article>
+<article class="service"><div class="emoji">🖌️</div><h3>Pintura</h3><p>Pintura de interiores, exteriores y mantenimiento.</p></article>
+<article class="service"><div class="emoji">🧹</div><h3>Limpieza</h3><p>Limpieza de hogares, comercios y espacios.</p></article>
+<article class="service"><div class="emoji">🚚</div><h3>Fletes y mudanzas</h3><p>Traslados, fletes y ayuda con mudanzas.</p></article>
+<article class="service"><div class="emoji">🧱</div><h3>Albañilería</h3><p>Reparaciones, revoques y trabajos de obra.</p></article>
+<article class="service"><div class="emoji">🌱</div><h3>Jardinería</h3><p>Mantenimiento de patios, jardines y espacios verdes.</p></article>
+<article class="service"><div class="emoji">🔧</div><h3>Mecánica automotor</h3><p>Consultas y servicios para vehículos.</p></article>
+<article class="service"><div class="emoji">❄️</div><h3>Refrigeración y aire acondicionado</h3><p>Instalación, mantenimiento y reparación.</p></article>
+</div>
+</div></section>
+<section class="soft"><div class="wrap">
+<h2>¿Cómo funciona?</h2><p class="intro">Un proceso simple, con contacto directo y presupuesto acordado entre cliente y profesional.</p>
+<div class="steps">
+<div class="step"><span class="num">1</span><h3>Contanos qué necesitás</h3><p>Indicá servicio, localidad y una breve descripción.</p></div>
+<div class="step"><span class="num">2</span><h3>Consultamos disponibilidad</h3><p>La atención depende de los profesionales registrados en tu zona.</p></div>
+<div class="step"><span class="num">3</span><h3>Coordiná directamente</h3><p>Confirmá precio, alcance, horario y condiciones antes de contratar.</p></div>
+</div>
+</div></section>
+<section id="contacto"><div class="wrap">
+<h2>Contactá a Conecta Servicios</h2>
+  <div class="card" style="margin:20px 0;padding:20px;border-radius:16px;background:white;border:1px solid #e2eaf0">
+  <h3>Solicitar un servicio</h3>
+  <p>Completá tus datos y enviaremos tu solicitud para que podamos contactarte.</p>
+
+  <form id="requestForm">
+    <label for="client_name">Nombre completo</label>
+    <input id="client_name" name="client_name" type="text" required
+      style="display:block;width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccd6df;border-radius:8px">
+
+    <label for="phone">Teléfono o WhatsApp</label>
+    <input id="phone" name="phone" type="tel" required
+      style="display:block;width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccd6df;border-radius:8px">
+
+    <label for="city">Localidad</label>
+    <label for="province">Provincia</label>
+<select id="province" name="province" required
+  style="display:block;width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccd6df;border-radius:8px">
+  <option value="">Elegí tu provincia</option>
+  <option>Buenos Aires</option>
+  <option>Catamarca</option>
+  <option>Chaco</option>
+  <option>Chubut</option>
+  <option>Ciudad Autónoma de Buenos Aires</option>
+  <option>Córdoba</option>
+  <option>Corrientes</option>
+  <option>Entre Ríos</option>
+  <option>Formosa</option>
+  <option>Jujuy</option>
+  <option>La Pampa</option>
+  <option>La Rioja</option>
+  <option>Mendoza</option>
+  <option>Misiones</option>
+  <option>Neuquén</option>
+  <option>Río Negro</option>
+  <option>Salta</option>
+  <option>San Juan</option>
+  <option>San Luis</option>
+  <option>Santa Cruz</option>
+  <option>Santa Fe</option>
+  <option>Santiago del Estero</option>
+  <option>Tierra del Fuego</option>
+  <option>Tucumán</option>
+</select>
+
+<label for="city">Localidad o ciudad</label>
+<input id="city" name="city" type="text" required
+  placeholder="Ej.: Rivadavia"
+  style="display:block;width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccd6df;border-radius:8px">
+
+    <label for="service">Servicio que necesitás</label>
+    <select id="service" name="service" required
+      style="display:block;width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccd6df;border-radius:8px">
+      <option value="">Elegí un servicio</option>
+      <option>Plomería</option>
+      <option>Electricidad</option>
+      <option>Pintura</option>
+      <option>Limpieza</option>
+      <option>Fletes y mudanzas</option>
+      <option>Albañilería</option>
+      <option>Jardinería</option>
+      <option>Mecánica automotor</option>
+      <option>Otro</option>
+    </select>
+
+    <label for="details">Contanos qué trabajo necesitás</label>
+    <textarea id="details" name="details" rows="3"
+      style="display:block;width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccd6df;border-radius:8px"></textarea>
+
+    <button class="btn primary" type="submit">Enviar solicitud</button>
+    <p id="requestMessage" role="status" aria-live="polite"></p>
+</form>
+  </div>
+  
+<div class="card" id="buscarProfesionales" style="margin:20px 0;padding:20px;border-radius:16px;background:white;border:1px solid #e2eaf0">
+  <h3>Encontrá profesionales</h3>
+  <p>Próximamente vas a poder buscar profesionales por provincia y localidad.</p>
+  <label for="buscarProvincia">Provincia</label>
+  <select id="buscarProvincia" style="display:block;width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccd6df;border-radius:8px">
+    <option value="">Seleccioná tu provincia</option>
+    <option>Buenos Aires</option>
+    <option>Catamarca</option>
+    <option>Chaco</option>
+    <option>Chubut</option>
+    <option>Ciudad Autónoma de Buenos Aires</option>
+    <option>Córdoba</option>
+    <option>Corrientes</option>
+    <option>Entre Ríos</option>
+    <option>Formosa</option>
+    <option>Jujuy</option>
+    <option>La Pampa</option>
+    <option>La Rioja</option>
+    <option>Mendoza</option>
+    <option>Misiones</option>
+    <option>Neuquén</option>
+    <option>Río Negro</option>
+    <option>Salta</option>
+    <option>San Juan</option>
+    <option>San Luis</option>
+    <option>Santa Cruz</option>
+    <option>Santa Fe</option>
+    <option>Santiago del Estero</option>
+    <option>Tierra del Fuego</option>
+    <option>Tucumán</option>
+  </select>
+  <label for="buscarLocalidad">Localidad</label>
+  <input id="buscarLocalidad" type="text" placeholder="Ej.: Rivadavia" style="display:block;width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccd6df;border-radius:8px">
+  <button type="button" id="btnBuscarProfesionales"
+  style="width:100%;padding:12px;background:#123A52;color:white;border:0;border-radius:8px;font-weight:bold">
+  Buscar profesionales
+</button>
+
+<div id="resultadosProfesionales" style="margin-top:16px"></div>
+</div>
+
+<p class="intro">¿Buscás un profesional o querés registrarte para ofrecer tus servicios? Escribinos por WhatsApp.</p>
+<div class="actions">
+<a class="btn primary" id="contactClient" href="#">Quiero solicitar un servicio</a>
+<a class="btn secondary" style="color:var(--navy);border-color:var(--navy)" id="contactWorker" href="#">Quiero ofrecer mis servicios</a>
+</div>
+<p class="small">Conecta Servicios facilita el contacto. Antes de contratar, verificá referencias, alcance del trabajo, precio y condiciones con el profesional.</p>
+<div id="setupWarning" class="notice" style="display:none;margin-top:18px">Antes de publicar, abrí <strong>config.js</strong> y reemplazá el número de ejemplo por tu WhatsApp en formato internacional, solo números. Ejemplo de Argentina: 549264XXXXXXXX.</div>
+</div></section>
+</main>
+<footer><div class="wrap"><div><strong>Conecta Servicios</strong><div class="small">Argentina · Disponibilidad según localidad</div></div><div class="small">Personas que necesitan. Profesionales que resuelven.</div></div></footer>
+<script>
+(function(){
+ const phone=(window.CONECTA_CONFIG&&window.CONECTA_CONFIG.whatsapp)||"5492646700819";
+ const valid=/^549\d{10}$/.test(phone);
+ const make=(msg)=>"https://wa.me/"+phone+"?text="+encodeURIComponent(msg);
+ const client=make("Hola, quiero solicitar un servicio por Conecta Servicios. Mi localidad es: ");
+ const worker=make("Hola, quiero registrarme como profesional en Conecta Servicios. Ofrezco: ");
+ ["clientCta","contactClient"].forEach(id=>{
+  document.getElementById(id).href="#requestForm";
+});
+ ["workerCta","contactWorker"].forEach(id=>document.getElementById(id).href=worker);
+ if(!valid){document.getElementById("setupWarning").style.display="block";["clientCta","contactClient","workerCta","contactWorker"].forEach(id=>document.getElementById(id).addEventListener("click",e=>{e.preventDefault();alert("Falta configurar el número de WhatsApp en config.js antes de usar este botón.");}));}
+})();
+</script>
+
+<script>
+(function () {
+  const form = document.getElementById("requestForm");
+  if (!form) return;
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    const message = document.getElementById("requestMessage");
+    const button = form.querySelector('button[type="submit"]');
+
+   if (!window.supabase || !window.SUPABASE_CONFIG ||
+    !window.SUPABASE_CONFIG.url ||
+    !window.SUPABASE_CONFIG.anonKey) {
+  message.textContent =
+    "No se cargó Supabase o falta su configuración.";
+  return;
+}
+
+const cfg = window.SUPABASE_CONFIG;
+
+
+    if (!cfg.url || !cfg.anonKey) {
+      message.textContent = "Falta configurar la conexión con Supabase.";
+      return;
+    }
+
+    button.disabled = true;
+    message.textContent = "Enviando solicitud...";
+
+    try {
+      const db = window.supabase.createClient(cfg.url, cfg.anonKey);
+
+      const request = {
+  client_name: document.getElementById("client_name").value.trim(),
+  phone: document.getElementById("phone").value.trim(),
+  province: document.getElementById("province").value,
+  city: document.getElementById("city").value.trim(),
+  service: document.getElementById("service").value,
+  details: document.getElementById("details").value.trim(),
+  status: "Pendiente"
+};
+
+      const { error } = await db.from("requests").insert([request]);
+
+      if (error) throw error;
+ message.textContent = "¡Solicitud enviada correctamente! Pronto nos comunicaremos con vos.";
+      form.reset();
+    } catch (error) {
+  console.error("Error al enviar solicitud:", error);
+  message.textContent = "ERROR: " + error.message;
+} finally {
+      button.disabled = false;
+    }
+  });
+})();
+  
+  // Buscar profesionales por provincia y localidad
+  document.getElementById("btnBuscarProfesionales")
+    .addEventListener("click", async function () {
+      const resultados = document.getElementById("resultadosProfesionales");
+      const provincia = document.getElementById("buscarProvincia").value;
+      const localidad = document.getElementById("buscarLocalidad").value.trim();
+
+      if (!provincia) {
+        resultados.textContent = "Seleccioná una provincia.";
+        return;
+      }
+
+      resultados.textContent = "Buscando profesionales...";
+
+      try {
+        const cfg = window.SUPABASE_CONFIG;
+        if (!cfg || !cfg.url || !cfg.anonKey) {
+          throw new Error("Falta configurar Supabase.");
+        }
+
+        const db = window.supabase.createClient(cfg.url, cfg.anonKey);
+
+        let consulta = db
+          .from("workers")
+          .select("name, province, city, service, phone")
+          .eq("province", provincia)
+          .eq("status", "Activo");
+
+        if (localidad) {
+          consulta = consulta.ilike("city", "%" + localidad + "%");
+        }
+
+        const { data, error } = await consulta;
+
+        if (error) throw error;
+
+        if (!data || data.length === 0) {
+          resultados.textContent = "No encontramos profesionales verificados en esa zona por ahora.";
+          return;
+        }
+
+        resultados.innerHTML = "";
+
+        data.forEach(function (profesional) {
+          const tarjeta = document.createElement("div");
+          tarjeta.style.cssText = "padding:14px;margin:10px 0;border:1px solid #dce5ec;border-radius:10px";
+
+          const nombre = document.createElement("h4");
+          nombre.textContent = profesional.name || "Profesional";
+          tarjeta.appendChild(nombre);
+
+          const detalle = document.createElement("p");
+          detalle.textContent = (profesional.service || "Servicio") + " · " +
+            (profesional.city || "") + ", " + (profesional.province || "");
+          tarjeta.appendChild(detalle);
+
+          if (profesional.phone) {
+            const contacto = document.createElement("a");
+            contacto.textContent = "Contactar por WhatsApp";
+            contacto.href = "https://wa.me/" + profesional.phone.replace(/\D/g, "");
+            contacto.target = "_blank";
+            contacto.rel = "noopener noreferrer";
+            tarjeta.appendChild(contacto);
+          }
+
+          resultados.appendChild(tarjeta);
+        });
+      } catch (error) {
+        console.error("Error al buscar profesionales:", error);
+        resultados.textContent = "No se pudo realizar la búsqueda. Revisaremos la conexión y los permisos.";
+      }
+    });
+
+</script>
+</body>
+</html>
