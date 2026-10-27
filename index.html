@@ -127,24 +127,7 @@ window.SUPABASE_CONFIG = {
 <input id="city" name="city" type="text" required
   placeholder="Ej.: Rivadavia"
   style="display:block;width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccd6df;border-radius:8px">
-<label for="searchService">Especialidad</label>
-<select id="searchService" name="searchService"
-  style="display:block;width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccd6df;border-radius:8px">
-  <option value="">Todos los servicios</option>
-  <option>Plomería</option>
-  <option>Electricidad</option>
-  <option>Pintura</option>
-  <option>Limpieza</option>
-  <option>Fletes y mudanzas</option>
-  <option>Albañilería</option>
-  <option>Jardinería</option>
-  <option>Mecánica automotor</option>
-  <option>Refrigeración y aire acondicionado</option>
-  <option>Metalúrgica</option>
-  <option>Electrónica</option>
-  <option>Peluquería</option>
-  <option>Otro</option>
-</select>
+
     <label for="service">Servicio que necesitás</label>
     <select id="service" name="service" required
       style="display:block;width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccd6df;border-radius:8px">
@@ -204,12 +187,33 @@ window.SUPABASE_CONFIG = {
     <option>Tierra del Fuego</option>
     <option>Tucumán</option>
   </select>
-  <label for="buscarLocalidad">Localidad</label>
-  <input id="buscarLocalidad" type="text" placeholder="Ej.: Rivadavia" style="display:block;width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccd6df;border-radius:8px">
-  <button type="button" id="btnBuscarProfesionales"
+  
+<label for="buscarLocalidad">Localidad</label>
+<input id="buscarLocalidad" type="text" placeholder="Ej.: Rivadavia" style="display:block;width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccd6df;border-radius:8px">
+
+<label for="searchService">Especialidad</label>
+<select id="searchService" name="searchService" style="display:block;width:100%;padding:12px;margin:6px 0 14px;border:1px solid #ccd6df;border-radius:8px">
+  <option value="">Todos los servicios</option>
+  <option>Plomería</option>
+  <option>Electricidad</option>
+  <option>Pintura</option>
+  <option>Limpieza</option>
+  <option>Fletes y mudanzas</option>
+  <option>Albañilería</option>
+  <option>Jardinería</option>
+  <option>Mecánica automotor</option>
+  <option>Refrigeración y aire acondicionado</option>
+  <option>Metalúrgica</option>
+  <option>Electrónica</option>
+  <option>Peluquería</option>
+  <option>Otro</option>
+</select>
+
+<button type="button" id="btnBuscarProfesionales"
   style="width:100%;padding:12px;background:#123A52;color:white;border:0;border-radius:8px;font-weight:bold">
   Buscar profesionales
 </button>
+  
 
 <div id="resultadosProfesionales" style="margin-top:16px"></div>
 </div>
